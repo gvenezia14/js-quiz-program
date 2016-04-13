@@ -42,12 +42,30 @@ else{
 var answer5 = prompt("What is the median age of seniors at WashU?");
 if ( answer5 === '21' ) {
  correct += 1;
- document.write("<p>Correct, the answer 21.</p>");
+ document.write("<p>Correct, the answer 22.</p>");
 }
 else{
   document.write("<p>Wrong you wrote " + answer5 + "</p>");
 }
 
-document.write("<p> You got " + correct + " out of 5 answers right. To retake the test refresh the page.</p>");
+if( correct === 5){
+  document.write("<p> You got " + correct + " out of 5 answers right. Gold Metal!</p>");
+}
+else if (correct === 4){
+  document.write("<p> You got " + correct + " out of 5 answers right. Silver Metal! To retake the test refresh the page.</p>");
+}
+else if (correct === 3){
+  document.write("<p> You got " + correct + " out of 5 answers right. Bronze Metal! To retake the test refresh the page.</p>");
+}
+
+else if (correct === 2){
+  document.write("<p> You got " + correct + " out of 5 answers right. You fail! To retake the test refresh the page.</p>");
+}
+else {
+  document.write("<p> You got " + correct + " out of 5 answers right. You just suck. To retake the test refresh the page.</p>");
+}
+
+
+
 
 // if statement
